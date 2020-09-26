@@ -38,7 +38,7 @@
     </h1>
 
     <div class="authors">
-        <center>
+<center>
        <div style=" float: left; width: 20%;">
         <a href="https://sites.google.com/view/daeun-lee" style="text-decoration:none">
                   <div>Daeun Lee<sup>1</sup></div>
@@ -80,18 +80,19 @@
           
         <a href="jinyounghan@skku.edu" style="text-decoration:none">
                   <div>jinyounghan@skku.edu</div>
-        </a><br>
+        </a>  
+	<p> </p>
 	
        </div>
 </center>
 
     </div>
     <div class="affiliations">
-        <center>
-            <br><sup>1</sup>Department of Applied Artificial Intelligence, Sungkyunkwan University
-            <br><sup>2</sup>National Assembly Research Service
-            <br><sup>3</sup>Department of Computer Science & Engineering, Incheon National University
-         </center>
+<center>
+<br><sup>1</sup>Department of Applied Artificial Intelligence, Sungkyunkwan University
+<br><sup>2</sup>National Assembly Research Service
+<br><sup>3</sup>Department of Computer Science & Engineering, Incheon National University
+</center>
     </div>
 
     <div class="sixteen columns">
@@ -124,14 +125,15 @@ Note that all the collected data is anonymized, hence no user information can be
 
 	<p>
             <b><em>Cross-lingual Suicidal Ideation Model: </em></b>  We propose a suicidal ideation detection model
-        that can identify whether a given post includes suicidal ideation or not. 
-        To utilize the existing suicide-related dictionaries developed for other languages(i.e., English and Chinese) in word embedding, 
-        our model translates a post written in the target language (i.e., Korean) into English and Chinese, and 
-        then uses the separate word embeddings developed for English and Chinese, respectively. By applying an ensemble approach for different languages, 
-        our proposed model finally predicts suicidal ideation of the given post in Korean.
+that can identify whether a given post includes suicidal ideation or not. 
+To utilize the existing suicide-related dictionaries developed for other languages(i.e., English and Chinese) in word embedding, 
+our model translates a post written in the target language (i.e., Korean) into English and Chinese, and 
+then uses the separate word embeddings developed for English and Chinese, respectively. By applying an ensemble approach for different languages, 
+our proposed model finally predicts suicidal ideation of the given post in Korean.
           </p><br>
 
           <div style="text-align:center; margin-bottom: 10px;">
+	<img src="https://leedaeuni.github.io/suicide_oriented.github.io/suicide_detect.JPG" style="width:1000px;">
             <div>The overall architecture of the cross-lingual suicidal ideation model.</div>
           </div><br>
 
@@ -140,16 +142,18 @@ Note that all the collected data is anonymized, hence no user information can be
           </p><br>
 
 	<div style="text-align:center; margin-bottom: 10px;">
+	<img src="https://leedaeuni.github.io/suicide_oriented.github.io/post_atten_lstm.JPG"style="width:280px;">
             <div>The architecture of the post attention layer.</div>
             </div><br>
 
 	<p>
-            <b><em>Word Embedding Model: </em></b>  We adopt a suicidal-oriented word embedding similar to the prior work (Cao et al., 2019) that refines a word embedding to 
+            <b><em>Word Embedding Model: </em></b>  We adopt a suicidal-oriented word embedding that refines a word embedding to 
 capture domain knowledge from a pre-built suicide-related dictionary. The model identifies whether a given sentence contains suicidal expression or not. 
 We made three different suicidal word embeddings, since different suicidal dictionaries exist (e.g., word-level for Korean and Chinese vs. sentence-level for English).
           </p><br>
 
 	<div style="text-align:center; margin-bottom: 10px;">
+	<img src="https://leedaeuni.github.io/suicide_oriented.github.io/word_emb.JPG" style="width:400px;">
             <div>The  architecture  of  the  word  embedding layer.</div>
             </div>
 
