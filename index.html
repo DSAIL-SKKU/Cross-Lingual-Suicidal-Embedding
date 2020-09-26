@@ -50,12 +50,16 @@ layout: projects
       <h1>Abstract</h1>
       <article>
           <p>
-            Users of social media often share their feelings or emotional states through their posts.
-            In this study, we developed a deep learning model to identify a user’s mental state based on his/her posting information.
-            To this end, we collected posts from mental health communities in <i>Reddit</i>.
-            By analyzing and learning posting information written by users, our proposed model could accurately identify whether a user’s post belongs to a specifc mental disorder, including depression, anxiety, bipolar, borderline personality disorder, schizophrenia, and autism.
-            We believe our model can help identify potential suferers with mental illness based on their posts.
-            This study further discusses the implication of our proposed model, which can serve as a supplementary tool for monitoring mental health states of individuals who frequently use social media.
+          Early intervention for suicide risks with social media data has increasingly received great attention. 
+              Using a suicide dictionary created by mental health experts is one of the effective way to detect suicidal ideation. 
+              However, little attention has been paid to validate whether and how the existing dictionaries for other languages (i.e., English and Chinese) can be used 
+              for predicting suicidal ideation for a low-resource language (i.e., Korean) where a knowledge-based suicide dictionary has not yet been developed. 
+              To this end, we propose a cross-lingual suicidal ideation detection model that can identify whether a given social media post includes suicidal ideation or not. 
+              To utilize the existing suicide dictionaries developed for other languages (i.e., English and Chinese) in word embedding, 
+              our model translates a post written in the target language (i.e., Korean) into English and Chinese, and then uses the separate 
+              suicidal-oriented word embeddings developed for English and Chinese, respectively. By applying an ensemble approach for different languages, 
+              the model achieves high accuracy, over 87\%. We believe our model is useful in accessing suicidal ideation using social media data for preventing potential 
+              suicide risk in an early stage.
           </p>
       </article>
     </div>
@@ -64,25 +68,15 @@ layout: projects
       <h1>Method</h1>
       <article>
           <p>
-            <em>Data collection: </em> We collected post data from the following six mental-health-related subreddits, each of which is reported to be associated witha specific disorder: r/depression, r/Anxiety, r/bipolar, r/BPD, r/schizophrenia, and r/autism.
-            In addition, we further collected post data from the most popular health-related subreddit, r/mentalhealth, to analyze posts with general health information.
+            <em>Data collection: </em>
             <br><br>
-            <em>Data anonymization: </em> All the user information is anonymized, hence no personally identifiable information was not identified; we followed all the anonymization process guided by the Sungkyunkwan University Institutional Review Board (IRB).
           </p><br>
 
           <div style="text-align:center; margin-bottom: 10px;">
-            <img src="{{ site.website_full }}static/img/reddit_cnn.jpg" style="width:400px;"><br>
-            <div>An architecture of the proposed CNN-based classifcation model.</div>
+            <div>An architecture</div>
           </div>
 
           <p>
-            <em>Classification models: </em> We developed six binary classification models, each of which categorizes a user' specific post into one of the following subreddits: r/depression, r/Anxiety, r/bipolar, r/BPD, r/schizophrenia, and r/autism.
-            Our conjecture is that a user who suffers from a specific mental problem writes a post on the corresponding subreddit that deals with the problem.
-            Therefore, we developed six independent binary classification models for each symptom to improve the performance.
-            By developing six independent models for each mental disorder, each of which uses data where users suffer from only one particular mental problem, we were able to accurately identify a user's potential mental state.
-            <br><br>
-            We divided our dataset into training (80%) and testing (20%) sets. We used two well-known classifiers, XGBoost and Convolutional Neural Network (CNN).
-            Note that we excluded the posts of users who wrote posts across multiple subreddits in learning phase.
           </p>
 
       </article>
@@ -91,43 +85,19 @@ layout: projects
     <div class="row">
       <div class="seven columns">
         <h1>Paper URL</h1>
-        <em><a href="https://www.nature.com/articles/s41598-020-68764-y">Scientific Reports (Published: 16 July 2020)</a></em>
         <br><br>
 
-        <h1>BibTeX</h1>
-        <span class="bibtex">
-          @article{kim2020deep,<br>
-            title={A deep learning model for detecting mental illness from user content on social media},<br>
-            author={Kim, Jina and Lee, Jieon and Park, Eunil and Han, Jinyoung},<br>
-            journal={Scientific Reports},<br>
-            volume={10},<br>
-            number={1},<br>
-            pages={1--6},<br>
-            year={2020},<br>
-            publisher={Nature Publishing Group}<br>
-          }
-        </span>
       </div>
 
-
-      <div class="eight columns">
-        <h1>Dataset</h1>
-          <ul>
-            <li><em>Posts of Mental-health-related Subreddits (.csv format)</em></li>
-            <li>- We are only allowed to distribute the data for the research purpose. Please complete the <a href="https://forms.gle/U6Q8GdnF1Z1sWe9U6" style="text-decoration: underline;"> request form</a>.</li>
-          </ul>
-        <br>
-
-        <h1>Media Citation</h1>
-        <ul>
-          <li><em><a href="https://www.skku.edu/skku/campus/skk_comm/news.do?mode=view&articleNo=84256&article.offset=0&articleLimit=10">Detecting mental health problems in social media</a></em></li>
-          <li>- <a href="http://www.veritas-a.com/news/articleView.html?idxno=332773">Veritas-a</a>, <a href="https://www.skku.edu/skku/campus/skk_comm/news.do?mode=view&articleNo=84256&article.offset=0&articleLimit=10">SKKU News</a>, and more than 10 media companies (July, 2020)</a></li>
-        </ul>
-      </div>
     </div>
 
 </section>
 
 <footer class="sixteen columns">
-    <p>This work was supported in part by the National Research Foundation of Korea (NRF) through the Korea Government (NRF-2020R1C1C1004324).</p>
+    <p>
+        <em>Acknowledgments</em> This research was supported in part by Ba-sic Science Research Program throughtheNa-tional 
+        Research Foundation of Korea (NRF)funded by the Ministry of Education (NRF-2018R1D1A1A02085647) and 
+        the MSIT (Ministryof Science and ICT), Korea, under the ICAN (ICTChallenge and Advanced Network of HRD) 
+        pro-gram (2020-0-01816) supervised by the IITP (Insti-tute of Information & Communications TechnologyPlanning & Evaluation).
+    </p>
 </footer>
