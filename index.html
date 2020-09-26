@@ -29,59 +29,69 @@
 <body style="padding:100px;">
 <section class="sixteen columns">
     <h1 class="paper_title">
-      Cross-Lingual Suicidal-Oriented Word Embedding
-      <br>
-      toward Suicide Prevention
+      <center><span style="font-size: 0.8em;color: gray;"> EMNLP findings 2020</span>
+	<br>
+	<span style="font-size: 1.5em;">Cross-Lingual Suicidal-Oriented Word Embedding
+      	<br>
+      	toward Suicide Prevention </span>
+       </center>
     </h1>
 
     <div class="authors">
-      <div class="author">
-        <a href="https://sites.google.com/view/daeun-lee">
-                  <div>Daeun Lee</div>
+        <center>
+       <div style=" float: left; width: 20%;">
+        <a href="https://sites.google.com/view/daeun-lee" style="text-decoration:none">
+                  <div>Daeun Lee<sup>1</sup></div>
         </a>
-        <a href="delee12@skku.edu">
+        <a href="delee12@skku.edu" style="text-decoration:none">
                   <div>delee12@skku.edu</div>
         </a> 
       </div>
     
-      <div class="author">
-          <div>Soyung Park</div>
-        <a href="sypark@assembly.go.k">
+      <div style=" float: left; width: 20%;">
+          <div>Soyung Park<sup>2</sup></div>
+        <a href="sypark@assembly.go.k" style="text-decoration:none">
                   <div>sypark@assembly.go.k</div>
         </a>
       </div>
       
-      <div class="author">
-        <a href="https://ji1kang.github.io/">
-                  <div>Jiwon Kang</div>
+      <div style=" float: left; width: 20%;">
+        <a href="https://ji1kang.github.io/" style="text-decoration:none">
+                  <div>Jiwon Kang<sup>1</sup></div>
         </a>
-        <a href="jiwonkan@skku.edu">
+        <a href="jiwonkan@skku.edu" style="text-decoration:none">
                   <div>jiwonkan@skku.edu</div>
         </a> 
       </div>
       
-      <div class="author">
-        <a href="https://daejin-choi.github.io/">
-                  <div>Daejin Choi</div>
+      <div style=" float: left; width: 20%;">
+        <a href="https://daejin-choi.github.io/" style="text-decoration:none">
+                  <div>Daejin Choi<sup>3</sup></div>
         </a>
-        <a href="djchoi@inu.ac.kr">
+        <a href="djchoi@inu.ac.kr" style="text-decoration:none">
                   <div>djchoi@inu.ac.kr</div>
         </a> 
       </div>
         
-
-      <div class="author">
-        <a href="https://sites.google.com/site/jyhantop/">
-                  <div>Jinyoung Han</div>
+      <div style=" float: left; width: 20%;">
+        <a href="https://sites.google.com/site/jyhantop/" style="text-decoration:none">
+                  <div>Jinyoung Han<sup>1</sup></div>
         </a>
           
-        <a href="jinyounghan@skku.edu">
+        <a href="jinyounghan@skku.edu" style="text-decoration:none">
                   <div>jinyounghan@skku.edu</div>
-        </a>  
+        </a><br>
+	
        </div>
+</center>
+
     </div>
     <div class="affiliations">
-      <p>Sungkyunkwan University, Seoul, Republic of Korea</p>
+        <center>
+            <br><sup>1</sup>Department of Applied Artificial Intelligence, Sungkyunkwan University
+            <br><sup>2</sup>National Assembly Research Service
+            <br><sup>3</sup>Department of Computer Science & Engineering, Incheon National University
+         </center>
     </div>
 
     <div class="sixteen columns">
@@ -106,39 +116,115 @@
       <h1>Method</h1>
       <article>
           <p>
-            <em>Data collection: </em>
-            <br><br>
+            <b><em>Data collection: </em></b>To develop models for predicting suicidal ideation for a post written in Korean, 	
+	we collected the suicide-related and non-suicide-related Korean posts from Naver Cafe (http://cafe.naver.com/).
+To improve the model performance, we further collected suicide-related dictionary data for generating suicide word embeddings for Chinese, English, and Korean, respectively. 
+Note that all the collected data is anonymized, hence no user information can be identifiable.
+          </p><br>
+
+	<p>
+            <b><em>Cross-lingual Suicidal Ideation Model: </em></b>  We propose a suicidal ideation detection model
+        that can identify whether a given post includes suicidal ideation or not. 
+        To utilize the existing suicide-related dictionaries developed for other languages(i.e., English and Chinese) in word embedding, 
+        our model translates a post written in the target language (i.e., Korean) into English and Chinese, and 
+        then uses the separate word embeddings developed for English and Chinese, respectively. By applying an ensemble approach for different languages, 
+        our proposed model finally predicts suicidal ideation of the given post in Korean.
           </p><br>
 
           <div style="text-align:center; margin-bottom: 10px;">
-            <div>An architecture</div>
-          </div>
+            <div>The overall architecture of the cross-lingual suicidal ideation model.</div>
+          </div><br>
+
+	<p>
+            <b><em>Post Attention Model: </em></b>  We apply the attention mechanism to reflect the important suicide-related information.
+          </p><br>
+
+	<div style="text-align:center; margin-bottom: 10px;">
+            <div>The architecture of the post attention layer.</div>
+            </div><br>
+
+	<p>
+            <b><em>Word Embedding Model: </em></b>  We adopt a suicidal-oriented word embedding similar to the prior work (Cao et al., 2019) that refines a word embedding to 
+capture domain knowledge from a pre-built suicide-related dictionary. The model identifies whether a given sentence contains suicidal expression or not. 
+We made three different suicidal word embeddings, since different suicidal dictionaries exist (e.g., word-level for Korean and Chinese vs. sentence-level for English).
+          </p><br>
+
+	<div style="text-align:center; margin-bottom: 10px;">
+            <div>The  architecture  of  the  word  embedding layer.</div>
+            </div>
 
           <p>
           </p>
+</article>
+</div>
+
+     <div class="sixteen columns">
+      <h1>Dataset</h1>
+      <article>
+          <p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-ga2x{border-color:#333333;font-family:"Arial Black", Gadget, sans-serif !important;;text-align:left;vertical-align:middle}
+.tg .tg-q85b{border-color:#333333;font-family:Arial, Helvetica, sans-serif !important;;text-align:left;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-ga2x">dataset</th>
+    <th class="tg-ga2x">source</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-q85b">Chinese Suicide Dictionary</td>
+    <td class="tg-q85b"><a href="https://peerj.com/articles/1455/" target="_blank" rel="noopener noreferrer">Lv et al. (2015)</a></td>
+  </tr>
+  <tr>
+    <td class="tg-q85b">English Suicide Dictionary</td>
+    <td class="tg-q85b"><a href="https://dl.acm.org/doi/pdf/10.1145/3308558.3313698" target="_blank" rel="noopener noreferrer">Gaur et al. (2019)</a></td>
+  </tr>
+  <tr>
+    <td class="tg-q85b">Korean Suicide Dictionary</td>
+    <td class="tg-q85b" rowspan="2"><a href="https://drive.google.com/drive/folders/188jQDrNM28CLinFYBNiXVLdX5hebdEtf?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a></td>
+  </tr>
+  <tr>
+    <td class="tg-q85b">Suicide-oriented Word embedding</td>
+  </tr>
+</tbody>
+</table>
+          </p><br>
 
       </article>
     </div>
 
     <div class="row">
       <div class="seven columns">
-        <h1>Paper URL</h1>
-        <br><br>
+        <h1>Our Lab Site</h1>
+	<article>
+        <a href="https://sites.google.com/view/datasciencelab/home" style="text-decoration:none">
+                  <div>Data Science & Artificial Intelligence Laboratory (DSAIL) @ Sungkyunkwan University</div>
+        </a>
+	<p><br></p>
+      </div>
+</article>
+    </div>
+
+    <div class="row">
+      <div class="seven columns">
+        <h1>Acknowledgments</h1>
+<article>
+        <p>This research was supported in part by Ba-sic Science Research Program throughtheNa-tional 
+        Research Foundation of Korea (NRF)funded by the Ministry of Education (NRF-2018R1D1A1A02085647) and 
+        the MSIT (Ministryof Science and ICT), Korea, under the ICAN (ICTChallenge and Advanced Network of HRD) 
+        pro-gram (2020-0-01816) supervised by the IITP (Insti-tute of Information & Communications TechnologyPlanning & Evaluation).</p>
 
       </div>
-
+</article>
     </div>
 
 </section>
 </body>
-    
-<footer class="sixteen columns">
-    <p>
-        <em>Acknowledgments</em> This research was supported in part by Ba-sic Science Research Program throughtheNa-tional 
-        Research Foundation of Korea (NRF)funded by the Ministry of Education (NRF-2018R1D1A1A02085647) and 
-        the MSIT (Ministryof Science and ICT), Korea, under the ICAN (ICTChallenge and Advanced Network of HRD) 
-        pro-gram (2020-0-01816) supervised by the IITP (Insti-tute of Information & Communications TechnologyPlanning & Evaluation).
-    </p>
-</footer>
-    
-</html>
