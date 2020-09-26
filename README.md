@@ -1,0 +1,1 @@
+# suicide_oriented.github.io
