@@ -14,4 +14,4 @@
 	- fasttext: Korean, Chinese, and English 
 
 # Acknowledgments
-This research was supported in part by Ba-sic Science Research Program throughtheNa-tional Research Foundation of Korea (NRF)funded by the Ministry of Education (NRF-2018R1D1A1A02085647) and the MSIT (Ministryof Science and ICT), Korea, under the ICAN (ICTChallenge and Advanced Network of HRD) pro-gram (2020-0-01816) supervised by the IITP (Insti-tute of Information & Communications TechnologyPlanning & Evaluation).
+This research was supported in part by Basic Science Research Program through the National Research Foundation of Korea (NRF) funded by the Ministry of Education (NRF-2018R1D1A1A02085647) and the MSIT (Ministryof Science and ICT), Korea, under the ICAN (ICT Challenge and Advanced Network of HRD) program (2020-0-01816) supervised by the IITP (Institute of Information & Communications Technology Planning & Evaluation).
