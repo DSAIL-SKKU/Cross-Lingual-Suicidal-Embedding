@@ -24,8 +24,7 @@ You can find the link to the research paper of this dataset and the lexicons [he
     year = {2020},
     publisher = "Association for Computational Linguistics",
     url = "https://www.aclweb.org/anthology/2020.findings-emnlp.200",
-    pages = "2208--2217",
-}
+    pages = "2208--2217"}
 
 
 # Acknowledgments
